@@ -10,7 +10,7 @@ import { JsonForms } from '@jsonforms/react';
 
 export default function SchedulerForm(props) {
   const [data, setData] = useState([]);
-   
+
   const [timeDataMod, setTimeDataMod] = useState([]);
 
   const selectedThreat = props.threatData;
@@ -35,12 +35,23 @@ export default function SchedulerForm(props) {
             Title: {
               type: 'string',
               readOnly: true,
-              
             },
             mon: {
-              title: 'M: 10-5-2020',
+              title: 'M:10-5-2020',
               type: 'string',
-              readOnly: true,
+              oneOf: [
+                {
+                  const: 'foo',
+                  title: 'Foo'
+                },
+                {
+                  const: 'bar',
+                  title: 'Bar'
+                },
+                {
+                  const: 'foobar',
+                  title: 'FooBar'
+                }
             },
             tue: {
               type: 'string',
