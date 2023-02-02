@@ -42,16 +42,17 @@ export default function SchedulerForm(props) {
               oneOf: [
                 {
                   const: 'foo',
-                  title: 'Foo'
+                  title: 'Foo',
                 },
                 {
                   const: 'bar',
-                  title: 'Bar'
+                  title: 'Bar',
                 },
                 {
                   const: 'foobar',
-                  title: 'FooBar'
-                }
+                  title: 'FooBar',
+                },
+              ],
             },
             tue: {
               type: 'string',
